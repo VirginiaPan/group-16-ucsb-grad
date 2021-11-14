@@ -26,8 +26,11 @@ ggplot(data = ucsb_grad, aes(x = year_abbr,
                              y = domestic_enrollment, 
                              fill = ethnicity)) +
   geom_col(position = "fill") +
+  theme_minimal() +
   labs(x = "Year",
-       y = "Enrollment Proportion")
+       y = "Enrollment Proportion",
+       caption = "Figure 1. UCSB Student Enrollment Proportions by Ethnicity for 2008 - 2019") +
+  theme(plot.caption=element_text(hjust = 0))                          # left justify figure caption
 
 ```
 
