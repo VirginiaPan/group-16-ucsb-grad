@@ -5,8 +5,8 @@ date: "11/14/2021"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include=TRUE, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 #Attach packages 
 library(tidyverse)
@@ -29,8 +29,10 @@ ggplot(data = ucsb_grad, aes(x = year_abbr,
   theme_minimal() +
   labs(x = "Year",
        y = "Enrollment Proportion",
+       title = "UCSB Ethnicity Enrollment by Year",
        caption = "Figure 1. UCSB Student Enrollment Proportions by Ethnicity for 2008 - 2019") +
-  theme(plot.caption=element_text(hjust = 0))                          # left justify figure caption
+  # left justify figure caption
+  theme(plot.caption=element_text(hjust = 0))                          
 
 ```
 
